@@ -5,9 +5,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon" />
     <link rel="stylesheet" href="{% static 'styles/style.css' %}" />
+    {% comment %} add font by shihongji {% endcomment %}
+    {% comment %} <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-lite-webfont@1.1.0/style.css" /> {% endcomment %}
     <title>数字营销助手</title>
+    {% comment %} <style>
+      body {
+        font-family: "LXGW WenKai", sans-serif;
+        /* Lite version */
+        font-family: "LXGW WenKai Lite", sans-serif;
+        /* TC version */
+        font-family: "LXGW WenKai TC", sans-serif;
+        /* Screen version */
+        font-family: "LXGW WenKai Screen", sans-serif;
+      }
+    </style> {% endcomment %}
   </head>
 
   <body>
