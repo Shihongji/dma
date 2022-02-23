@@ -1,10 +1,10 @@
 <div class="topics">
   <div class="topics__header">
-    <h2>Browse Topics</h2>
+    <h2>标签选择</h2>
   </div>
   <ul class="topics__list">
     <li>
-      <a href="{% url 'home' %}" class="active">All<span>{{rooms_sum}} </span></a>
+      <a href="{% url 'home' %}" class="active">全部<span>{{rooms_sum}} </span></a>
     </li>
     {% for topic in topics %}
     <li>
@@ -14,7 +14,7 @@
     {% endfor %}
   </ul>
   <a class="btn btn--link" href="{% url 'topics' %}">
-    More
+    更多
     <svg
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
