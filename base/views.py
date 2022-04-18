@@ -5,7 +5,7 @@ from .models import Room, Topic, Message
 from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
-from .froms import RoomForm, UserForm
+from .forms import RoomForm, UserForm
 from django.db.models import Q
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
@@ -199,3 +199,7 @@ def topicsPage(request):
 def activityPage(request):
     room_messages = Message.objects.all()
     return render(request, 'base/activity.html', {'room_messages':room_messages})
+
+def createEntry(request):
+    context = {}
+    return render(request, 'base/entry.html', context)

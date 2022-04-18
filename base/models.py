@@ -37,3 +37,15 @@ class Message(models.Model):
 
     def __str__(self):
         return self.body[:50]
+
+class Pinglun(models.Model):
+    name = models.CharField(max_length=200)
+    Factory_ID = models.CharField(max_length=10)
+    message = models.TextField()
+    updated = models.DateTimeField(auto_now=True)
+    created = models.DateTimeField(auto_now_add=True)
+    class Meta:
+        ordering = ['-updated', 'created']
+
+    def __str__(self):
+        return self.body[:50]
